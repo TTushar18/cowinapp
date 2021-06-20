@@ -32,6 +32,41 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
+        stage('Building Docker Image') {
+            steps {
+                echo 'Starting Building Docker Image'
+                sh 'java -version'
+                echo 'Completed  Building Docker Image'
+            }
+        }
+        stage(' Docker Image Tag') {
+            steps {
+                echo 'Starting Building Docker Image'
+                sh 'java -version'
+                echo 'Completed  Building Docker Image'
+            }
+        }
+        stage(' Docker push to Docker Hub') {
+            steps {
+                echo 'Starting Building Docker Image'
+                sh 'java -version'
+                echo 'Completed  Building Docker Image'
+            }
+        }
+        stage(' Docker Image Push to Amazon ECR') {
+            steps {
+                echo 'Starting Building Docker Image'
+                sh 'java -version'
+                echo 'Completed  Building Docker Image'
+            }
+        }
 
+        stage(' Deployment to K8s Cluster') {
+            steps {
+                echo 'Starting Building Docker Image'
+                sh 'java -version'
+                echo 'Completed  Building Docker Image'
+            }
+        }
     }
 }
